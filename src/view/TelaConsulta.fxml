@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gui.TelaConsulta"
+            prefWidth="600" prefHeight="400">
+
+    <children>
+
+        <VBox spacing="10"
+              AnchorPane.topAnchor="20"
+              AnchorPane.leftAnchor="20"
+              AnchorPane.rightAnchor="20"
+              AnchorPane.bottomAnchor="20">
+
+            <!-- Campo de busca -->
+            <HBox spacing="10">
+                <TextField fx:id="buscaField" promptText="Buscar por nome ou CPF"/>
+                <Button text="Buscar" onAction="#buscar"/>
+                <Button text="Cadastrar Novo" onAction="#irParaCadastro"/>
+            </HBox>
+
+            <!-- Tabela -->
+            <TableView fx:id="tabelaClientes" VBox.vgrow="ALWAYS">
+
+                <columns>
+                    <TableColumn fx:id="colNome" text="Nome" prefWidth="200"/>
+                    <TableColumn fx:id="colCpf" text="CPF" prefWidth="150"/>
+                    <TableColumn fx:id="colAcoes" text="Ações" prefWidth="200"/>
+                </columns>
+
+            </TableView>
+
+        </VBox>
+
+    </children>
+</AnchorPane>
